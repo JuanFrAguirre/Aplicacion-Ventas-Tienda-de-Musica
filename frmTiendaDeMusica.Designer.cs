@@ -37,7 +37,7 @@
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.cboProducto = new System.Windows.Forms.ComboBox();
             this.cboFormaPago = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gpbSexo = new System.Windows.Forms.GroupBox();
             this.rdoOtro = new System.Windows.Forms.RadioButton();
             this.rdoFemenino = new System.Windows.Forms.RadioButton();
             this.rdoMasculino = new System.Windows.Forms.RadioButton();
@@ -60,8 +60,6 @@
             this.txtPorcCuerdas = new System.Windows.Forms.TextBox();
             this.txtCantCuerdas = new System.Windows.Forms.TextBox();
             this.txtPorcPercusion = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -82,9 +80,13 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.gpbSexo.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -180,17 +182,17 @@
             this.cboFormaPago.Size = new System.Drawing.Size(218, 33);
             this.cboFormaPago.TabIndex = 3;
             // 
-            // groupBox1
+            // gpbSexo
             // 
-            this.groupBox1.Controls.Add(this.rdoOtro);
-            this.groupBox1.Controls.Add(this.rdoFemenino);
-            this.groupBox1.Controls.Add(this.rdoMasculino);
-            this.groupBox1.Location = new System.Drawing.Point(149, 236);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(323, 191);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Sexo";
+            this.gpbSexo.Controls.Add(this.rdoOtro);
+            this.gpbSexo.Controls.Add(this.rdoFemenino);
+            this.gpbSexo.Controls.Add(this.rdoMasculino);
+            this.gpbSexo.Location = new System.Drawing.Point(149, 236);
+            this.gpbSexo.Name = "gpbSexo";
+            this.gpbSexo.Size = new System.Drawing.Size(323, 191);
+            this.gpbSexo.TabIndex = 3;
+            this.gpbSexo.TabStop = false;
+            this.gpbSexo.Text = "Sexo";
             // 
             // rdoOtro
             // 
@@ -256,8 +258,8 @@
             this.groupBox2.Controls.Add(this.txtPorcCuerdas);
             this.groupBox2.Controls.Add(this.txtCantCuerdas);
             this.groupBox2.Controls.Add(this.txtPorcPercusion);
-            this.groupBox2.Controls.Add(this.label25);
-            this.groupBox2.Controls.Add(this.label18);
+            this.groupBox2.Controls.Add(this.label27);
+            this.groupBox2.Controls.Add(this.label26);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label24);
             this.groupBox2.Controls.Add(this.label23);
@@ -266,12 +268,13 @@
             this.groupBox2.Controls.Add(this.txtPorcVientos);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.txtCantVientos);
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox2.Location = new System.Drawing.Point(564, 50);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(900, 670);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Datos";
+            this.groupBox2.Text = "Registros Diarios";
             // 
             // groupBox3
             // 
@@ -348,11 +351,11 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(75, 603);
+            this.label13.Location = new System.Drawing.Point(75, 593);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(218, 25);
+            this.label13.Size = new System.Drawing.Size(124, 50);
             this.label13.TabIndex = 0;
-            this.label13.Text = "Instrumento mas caro";
+            this.label13.Text = "Instrumento\r\nmas caro";
             // 
             // txtComodin
             // 
@@ -367,18 +370,18 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(75, 535);
+            this.label12.Location = new System.Drawing.Point(75, 522);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(169, 25);
+            this.label12.Size = new System.Drawing.Size(169, 50);
             this.label12.TabIndex = 0;
-            this.label12.Text = "Descuento Total";
+            this.label12.Text = "Descuento Total\r\ndel dia\r\n";
             // 
             // txtDecuentoTotal
             // 
             this.txtDecuentoTotal.Enabled = false;
-            this.txtDecuentoTotal.Location = new System.Drawing.Point(432, 532);
+            this.txtDecuentoTotal.Location = new System.Drawing.Point(342, 535);
             this.txtDecuentoTotal.Name = "txtDecuentoTotal";
-            this.txtDecuentoTotal.Size = new System.Drawing.Size(107, 31);
+            this.txtDecuentoTotal.Size = new System.Drawing.Size(236, 31);
             this.txtDecuentoTotal.TabIndex = 1;
             this.txtDecuentoTotal.Text = "-";
             this.txtDecuentoTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -395,9 +398,9 @@
             // txtTotalDelDia
             // 
             this.txtTotalDelDia.Enabled = false;
-            this.txtTotalDelDia.Location = new System.Drawing.Point(432, 464);
+            this.txtTotalDelDia.Location = new System.Drawing.Point(342, 467);
             this.txtTotalDelDia.Name = "txtTotalDelDia";
-            this.txtTotalDelDia.Size = new System.Drawing.Size(107, 31);
+            this.txtTotalDelDia.Size = new System.Drawing.Size(236, 31);
             this.txtTotalDelDia.TabIndex = 1;
             this.txtTotalDelDia.Text = "-";
             this.txtTotalDelDia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -416,7 +419,7 @@
             this.txtPorcCuerdas.Enabled = false;
             this.txtPorcCuerdas.Location = new System.Drawing.Point(432, 331);
             this.txtPorcCuerdas.Name = "txtPorcCuerdas";
-            this.txtPorcCuerdas.Size = new System.Drawing.Size(68, 31);
+            this.txtPorcCuerdas.Size = new System.Drawing.Size(90, 31);
             this.txtPorcCuerdas.TabIndex = 1;
             this.txtPorcCuerdas.Text = "-";
             this.txtPorcCuerdas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -426,7 +429,7 @@
             this.txtCantCuerdas.Enabled = false;
             this.txtCantCuerdas.Location = new System.Drawing.Point(317, 331);
             this.txtCantCuerdas.Name = "txtCantCuerdas";
-            this.txtCantCuerdas.Size = new System.Drawing.Size(68, 31);
+            this.txtCantCuerdas.Size = new System.Drawing.Size(90, 31);
             this.txtCantCuerdas.TabIndex = 1;
             this.txtCantCuerdas.Text = "-";
             this.txtCantCuerdas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -436,28 +439,10 @@
             this.txtPorcPercusion.Enabled = false;
             this.txtPorcPercusion.Location = new System.Drawing.Point(432, 399);
             this.txtPorcPercusion.Name = "txtPorcPercusion";
-            this.txtPorcPercusion.Size = new System.Drawing.Size(68, 31);
+            this.txtPorcPercusion.Size = new System.Drawing.Size(90, 31);
             this.txtPorcPercusion.TabIndex = 1;
             this.txtPorcPercusion.Text = "-";
             this.txtPorcPercusion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(312, 534);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(24, 25);
-            this.label25.TabIndex = 0;
-            this.label25.Text = "$";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(312, 467);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(24, 25);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "$";
             // 
             // label10
             // 
@@ -471,27 +456,30 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(547, 399);
+            this.label24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label24.Location = new System.Drawing.Point(547, 402);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(31, 25);
+            this.label24.Size = new System.Drawing.Size(33, 27);
             this.label24.TabIndex = 0;
             this.label24.Text = "%";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(547, 331);
+            this.label23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label23.Location = new System.Drawing.Point(547, 334);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(31, 25);
+            this.label23.Size = new System.Drawing.Size(33, 27);
             this.label23.TabIndex = 0;
             this.label23.Text = "%";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(547, 263);
+            this.label22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label22.Location = new System.Drawing.Point(547, 266);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(31, 25);
+            this.label22.Size = new System.Drawing.Size(33, 27);
             this.label22.TabIndex = 0;
             this.label22.Text = "%";
             // 
@@ -500,7 +488,7 @@
             this.txtCantPercusion.Enabled = false;
             this.txtCantPercusion.Location = new System.Drawing.Point(317, 399);
             this.txtCantPercusion.Name = "txtCantPercusion";
-            this.txtCantPercusion.Size = new System.Drawing.Size(68, 31);
+            this.txtCantPercusion.Size = new System.Drawing.Size(90, 31);
             this.txtCantPercusion.TabIndex = 1;
             this.txtCantPercusion.Text = "-";
             this.txtCantPercusion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -510,7 +498,7 @@
             this.txtPorcVientos.Enabled = false;
             this.txtPorcVientos.Location = new System.Drawing.Point(432, 263);
             this.txtPorcVientos.Name = "txtPorcVientos";
-            this.txtPorcVientos.Size = new System.Drawing.Size(68, 31);
+            this.txtPorcVientos.Size = new System.Drawing.Size(90, 31);
             this.txtPorcVientos.TabIndex = 1;
             this.txtPorcVientos.Text = "-";
             this.txtPorcVientos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -529,7 +517,7 @@
             this.txtCantVientos.Enabled = false;
             this.txtCantVientos.Location = new System.Drawing.Point(317, 263);
             this.txtCantVientos.Name = "txtCantVientos";
-            this.txtCantVientos.Size = new System.Drawing.Size(68, 31);
+            this.txtCantVientos.Size = new System.Drawing.Size(90, 31);
             this.txtCantVientos.TabIndex = 1;
             this.txtCantVientos.Text = "-";
             this.txtCantVientos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -537,9 +525,9 @@
             // txtTotalAPagar
             // 
             this.txtTotalAPagar.Enabled = false;
-            this.txtTotalAPagar.Location = new System.Drawing.Point(283, 689);
+            this.txtTotalAPagar.Location = new System.Drawing.Point(224, 21);
             this.txtTotalAPagar.Name = "txtTotalAPagar";
-            this.txtTotalAPagar.Size = new System.Drawing.Size(189, 31);
+            this.txtTotalAPagar.Size = new System.Drawing.Size(187, 31);
             this.txtTotalAPagar.TabIndex = 6;
             this.txtTotalAPagar.Text = "-";
             this.txtTotalAPagar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -547,7 +535,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(76, 689);
+            this.label14.Location = new System.Drawing.Point(15, 21);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(139, 25);
             this.label14.TabIndex = 0;
@@ -574,11 +562,13 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(441, 587);
+            this.label17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label17.Location = new System.Drawing.Point(441, 589);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(31, 25);
+            this.label17.Size = new System.Drawing.Size(33, 27);
             this.label17.TabIndex = 0;
             this.label17.Text = "%";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnRegistrar
             // 
@@ -587,25 +577,25 @@
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(186, 111);
             this.btnRegistrar.TabIndex = 7;
-            this.btnRegistrar.Text = "Registrar Venta";
+            this.btnRegistrar.Text = "Registrar\r\nVenta";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnLimpiar
             // 
             this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpiar.Location = new System.Drawing.Point(636, 247);
+            this.btnLimpiar.Location = new System.Drawing.Point(636, 291);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(186, 111);
             this.btnLimpiar.TabIndex = 8;
-            this.btnLimpiar.Text = "Resetear";
+            this.btnLimpiar.Text = "Limpiar\r\nRegistros";
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnSalir
             // 
             this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalir.Location = new System.Drawing.Point(636, 427);
+            this.btnSalir.Location = new System.Drawing.Point(636, 522);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(186, 111);
             this.btnSalir.TabIndex = 9;
@@ -615,9 +605,9 @@
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(283, 636);
+            this.txtPrecio.Location = new System.Drawing.Point(285, 636);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(189, 31);
+            this.txtPrecio.Size = new System.Drawing.Size(187, 31);
             this.txtPrecio.TabIndex = 6;
             this.txtPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -633,20 +623,52 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(253, 692);
+            this.label20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label20.Location = new System.Drawing.Point(192, 24);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(24, 25);
+            this.label20.Size = new System.Drawing.Size(26, 27);
             this.label20.TabIndex = 0;
             this.label20.Text = "$";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
+            this.label21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label21.Location = new System.Drawing.Point(253, 642);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(24, 25);
+            this.label21.Size = new System.Drawing.Size(26, 27);
             this.label21.TabIndex = 0;
             this.label21.Text = "$";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label26.Location = new System.Drawing.Point(312, 467);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(26, 27);
+            this.label26.TabIndex = 0;
+            this.label26.Text = "$";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label27.Location = new System.Drawing.Point(312, 534);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(26, 27);
+            this.label27.TabIndex = 0;
+            this.label27.Text = "$";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.txtTotalAPagar);
+            this.panel1.Controls.Add(this.label20);
+            this.panel1.Location = new System.Drawing.Point(61, 689);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(443, 75);
+            this.panel1.TabIndex = 7;
             // 
             // frmTiendaDeMusica
             // 
@@ -655,34 +677,34 @@
             this.ClientSize = new System.Drawing.Size(1512, 805);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.chkDescuento);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gpbSexo);
             this.Controls.Add(this.cboFormaPago);
             this.Controls.Add(this.cboProducto);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.label20);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.txtPrecio);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.txtTotalAPagar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDescuento);
+            this.Controls.Add(this.panel1);
             this.Name = "frmTiendaDeMusica";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ventas del dia";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gpbSexo.ResumeLayout(false);
+            this.gpbSexo.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -699,7 +721,7 @@
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.ComboBox cboProducto;
         private System.Windows.Forms.ComboBox cboFormaPago;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gpbSexo;
         private System.Windows.Forms.RadioButton rdoOtro;
         private System.Windows.Forms.RadioButton rdoFemenino;
         private System.Windows.Forms.RadioButton rdoMasculino;
@@ -732,7 +754,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtDescuento;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnSalir;
@@ -740,10 +761,12 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

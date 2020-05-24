@@ -15,10 +15,6 @@ namespace Stream_23_05
         private double totalVentas, totalDescuentos;
         private int contEfectivo, contTC, contTD, contVientos, contCuerdas, contPerc, contInstrumentos;
 
-        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
-        {
-        }
-
         private void chkDescuento_CheckedChanged(object sender, EventArgs e)
         {
             if (chkDescuento.Checked)
@@ -43,8 +39,48 @@ namespace Stream_23_05
 
         private bool validarDatos()
         {
-            if (string.IsNullOrWhiteSpace(txtNombre.Text)) return false;
-            if (string.IsNullOrWhiteSpace(txtApellido.Text)) return false;
+            if (string.IsNullOrWhiteSpace(txtNombre.Text))
+            {
+                mostrarMensajeError("nombre");
+                txtNombre.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtApellido.Text))
+            {
+                mostrarMensajeError("apellido");
+                txtApellido.Focus();
+                return false;
+            }
+
+            if (cboProducto.SelectedIndex == -1)
+            {
+                mostrarMensajeError("producto");
+                cboProducto.Focus();
+                return false;
+            }
+
+            if (rdoMasculino.Checked == false && rdoMasculino.Checked == false
+                && rdoMasculino.Checked == false)
+            {
+                mostrarMensajeError("sexo");
+                gpbSexo.Focus();
+                return false;
+            }
+
+            if (cboFormaPago.SelectedIndex == -1)
+            {
+                mostrarMensajeError("forma de pago");
+                cboFormaPago.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtPrecio.Text))
+            {
+                mostrarMensajeError("precio");
+                txtPrecio.Focus();
+                return false;
+            }
             return true;
         }
 
@@ -66,7 +102,8 @@ namespace Stream_23_05
                 if (rdoOtro.Checked) musimundo.Sexo = 3;
                 musimundo.FormaPago = cboFormaPago.SelectedIndex + 1;
                 musimundo.AplicaDescuento = chkDescuento.Checked;
-                musimundo.Descuento = double.Parse(txtDescuento.Text);
+                if (chkDescuento.Checked) musimundo.Descuento = double.Parse(txtDescuento.Text);
+                else musimundo.Descuento = 0;
                 musimundo.Precio = double.Parse(txtPrecio.Text);
 
                 //---------------------------------------------------------------------------------------
@@ -159,6 +196,14 @@ namespace Stream_23_05
             else
             {
             }
+        }
+
+        private void mostrarMensajeError(string campo)
+        {
+            MessageBox.Show("          ------------------------------\n\n" +
+                    "Aun no se puede registrar la venta\n" +
+                    $"Falta ingresar algunos datos en el campo {campo}\n\n" +
+                    "          ------------------------------", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
