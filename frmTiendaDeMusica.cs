@@ -53,6 +53,8 @@ namespace Stream_23_05
                 return false;
             }
 
+            ///
+
             if (cboProducto.SelectedIndex == -1)
             {
                 mostrarMensajeError("producto");
@@ -182,6 +184,7 @@ namespace Stream_23_05
 
                 txtComodin.Text = InstrumentoMasCaro.ProductoToString();
 
+                // limpia los campos de ingreso de datos antes de presentar el mensaje con los datos
                 txtNombre.Text = "";
                 txtApellido.Text = "";
                 cboFormaPago.SelectedIndex = -1;
@@ -192,6 +195,10 @@ namespace Stream_23_05
                 chkDescuento.Checked = false;
                 txtDescuento.Text = "";
                 txtPrecio.Text = "";
+
+                // presenta un mensaje con los datos que se acaban de limpiar, para brindar informacion de la venta realizada
+
+                MessageBox.Show(musimundo.toString(), "Venta registrada con exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {

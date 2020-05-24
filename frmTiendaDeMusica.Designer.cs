@@ -180,7 +180,7 @@
             this.cboFormaPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboFormaPago.FormattingEnabled = true;
             this.cboFormaPago.Items.AddRange(new object[] {
-            "Efectico",
+            "Efectivo",
             "Tarjeta Credito",
             "Tarjeta Debito"});
             this.cboFormaPago.Location = new System.Drawing.Point(254, 473);
@@ -591,7 +591,7 @@
             this.btnRegistrar.Location = new System.Drawing.Point(664, 57);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(186, 111);
-            this.btnRegistrar.TabIndex = 7;
+            this.btnRegistrar.TabIndex = 0;
             this.btnRegistrar.Text = "Registrar\r\nVenta";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
@@ -604,7 +604,7 @@
             this.btnLimpiar.Location = new System.Drawing.Point(664, 288);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(186, 111);
-            this.btnLimpiar.TabIndex = 8;
+            this.btnLimpiar.TabIndex = 1;
             this.btnLimpiar.Text = "Limpiar\r\nRegistros";
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
@@ -617,7 +617,7 @@
             this.btnSalir.Location = new System.Drawing.Point(664, 519);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(186, 111);
-            this.btnSalir.TabIndex = 9;
+            this.btnSalir.TabIndex = 2;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);

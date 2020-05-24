@@ -57,6 +57,10 @@ namespace Stream_23_05
         // -------------------------------------------------
         // metodos
 
+        /// <summary>
+        /// consulta segun el entero Producto
+        /// </summary>
+        /// <returns> el instrumento vendido en formato string </returns>
         public string ProductoToString()
         {
             switch (Producto)
@@ -67,6 +71,10 @@ namespace Stream_23_05
             }
         }
 
+        /// <summary>
+        /// consulta segun el entero FormaPago
+        /// </summary>
+        /// <returns> la forma de pago en formato string </returns>
         public string FormaPagoToString()
         {
             switch (FormaPago)
@@ -77,18 +85,21 @@ namespace Stream_23_05
             }
         }
 
+        /// <summary>
+        /// toma casi todos los datos de las propiedades del objeto
+        /// </summary>
+        /// <returns> un mensaje informando sobre la venta </returns>
         public string toString()
         {
-            string mensaje = $"Venta registrada con exito\n" +
-                $"--------------------\n" +
-                $"Nombre del cliente: {Nombre} {Apellido}\n" +
-                $"Forma de pago: {FormaPago}" +
-                $"Compra: {ProductoToString()}, {Precio}\n";
+            string mensaje = $"Venta registrada con exito!\n" +
+                $"\t--------------------\n" +
+                $"Nombre del cliente: {Apellido}, {Nombre}\n" +
+                $"Forma de pago: {FormaPagoToString()}\n" +
+                $"Rubro: {ProductoToString()}\n" +
+                $"Precio: {Precio}\n";
 
-            if (AplicaDescuento)
-            {
-                mensaje += $"Aplico un descuento del {Descuento}%";
-            }
+            if (AplicaDescuento) mensaje += $"Se le aplico un descuento del {Descuento}%\n\t--------------------";
+            else mensaje += $"\t--------------------";
 
             return mensaje;
         }
